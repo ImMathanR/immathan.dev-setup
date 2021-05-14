@@ -23,8 +23,8 @@ cd public
 MESSAGE="rebuilding site $(date)"
 git add .
 
-git config --global user.email "ci@github"
-git config --global user.name "GitHub Actions CI"
+git config --global user.email "mathan.raj43@gmail.com"
+git config --global user.name "Mathan"
 printf "added git user config"
 git commit -m "$MESSAGE"
 printf "commited"
