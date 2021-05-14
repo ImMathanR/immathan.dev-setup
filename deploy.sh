@@ -4,7 +4,7 @@ set -e
 
 GITHUB_TOKEN="${1}"
 GITHUB_REPO="ImMathanR/immathan.dev-public"
-GITHUB_BRANCH="master"
+GITHUB_BRANCH="main"
 
 printf "\033[0;32mClean up public folder...\033[0m\n"
 cd public
