@@ -24,6 +24,8 @@ MESSAGE="rebuilding site $(date)"
 git add .
 
 if [[ -z "${GITHUB_TOKEN}" || -z "${GITHUB_REPO}" ]]; then
+  git config --global user.email "ci@github"
+  git config --global user.name "GitHub Actions CI"
   git commit -m "$MESSAGE"
   git push origin "${GITHUB_BRANCH}"
 else
