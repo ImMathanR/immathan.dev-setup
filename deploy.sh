@@ -23,16 +23,24 @@ cd public
 MESSAGE="rebuilding site $(date)"
 git add .
 
-if [[ -z "${GITHUB_TOKEN}" || -z "${GITHUB_REPO}" ]]; then
-  git config --global user.email "ci@github"
-  git config --global user.name "GitHub Actions CI"
-  git commit -m "$MESSAGE"
-  git push origin "${GITHUB_BRANCH}"
-else
-  git config --global user.email "ci@github"
-  git config --global user.name "GitHub Actions CI"
+git config --global user.email "ci@github"
+git config --global user.name "GitHub Actions CI"
+printf "added git user config"
+git commit -m "$MESSAGE"
+printf "commited"
+git push origin "${GITHUB_BRANCH}"
+printf "pushed"
+
+# if [[ -z "${GITHUB_TOKEN}" || -z "${GITHUB_REPO}" ]]; then
+#   git config --global user.email "ci@github"
+#   git config --global user.name "GitHub Actions CI"
+#   git commit -m "$MESSAGE"
+#   git push origin "${GITHUB_BRANCH}"
+# else
+#   git config --global user.email "ci@github"
+#   git config --global user.name "GitHub Actions CI"
   
-  git commit -m "$MESSAGE"
+#   git commit -m "$MESSAGE"
   
-  git push --quiet "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${GITHUB_REPO}.git" "${GITHUB_BRANCH}"
-fi
+#   git push --quiet "https://${GITHUB_TOKEN}:x-oauth-basic@github.com/${GITHUB_REPO}.git" "${GITHUB_BRANCH}"
+# fi
