@@ -1,0 +1,74 @@
+## Basic Configuration
+baseurl = "https://immathan.dev/"
+languageCode = "en"
+
+title = "Mathan"
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "UA-148934073-1"
+# enableRobotsTXT = true
+
+# summarylength = 30
+
+#paginate = 5
+
+## Site Settings
+[params]
+    author = "Mathan Raj"
+    title = "tildroid"
+    themeColor = "theme-base-0a"
+    # description = "..."
+    authorimage = "../img/avatar.jpg"
+    dateformat = "Jan 2, 2006"
+
+    # sidebar, copyright & license
+    #logoimage = "/img/hugo.png"
+    copyright = "Mathan Raj"
+    since = 2021
+    license = "CC BY-SA 4.0"
+    licenseURL = "https://creativecommons.org/licenses/by-sa/4.0"
+    showBuiltWith = false
+
+    # https://highlightjs.org
+    highlightjs = true
+    highlightjsstyle = "androidstudio"
+    highlightjslanguages = ["bash", "java", "kotlin"]
+    
+    # please choose either GraphComment or Disqus or Utterances
+    #GraphCommentId = "..."
+    #UtterancesRepo = "..." # https://utteranc.es/
+    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
+    #UtterancesTheme = "..." # github-light or github-dark
+
+    # Table of contents
+    #toc = none, "hugo", or "tocbot"
+
+## Social Accounts
+[params.social]
+    github = "immathanr"
+    #instagram = "<username>"
+    #xing = "<username>"
+    linkedin = "mathan-raj-90323865"
+    twitter = "immathanr"
+    #facebook = "vasya.drobushkov"
+    #microblog = "<username>"
+    stackoverflow = "3110587/immathan"
+    #telegram = "krossovochkin_newsletter"
+    # orcid = "<xxxx-xxxx-xxxx-xxxx>"
+    #email = "your-email@example.com"
+    # gravatar = "your-email@example.com"
+    # pgpkey = "<path-to-your-key-in-/static>"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 300
+    url = "/about/"
