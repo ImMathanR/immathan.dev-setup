@@ -25,6 +25,8 @@ git add .
 
 if [[ -z "${GITHUB_TOKEN}" || -z "${GITHUB_REPO}" ]]; then
   printf "\033[0;32mcoming inside if...\033[0m\n"
+  git config --global user.email "mathan.raj43@gmail.com"
+  git config --global user.name "Mathan"
   git commit -m "$MESSAGE"
   printf "\033[0;32mpush error if ...\033[0m\n"
   git push origin "${GITHUB_BRANCH}"
