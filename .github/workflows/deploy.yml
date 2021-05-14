@@ -20,7 +20,7 @@ jobs:
       - name: webfactory/ssh-agent
         uses: webfactory/ssh-agent@v0.5.2
         with:
-          ssh-private-key: ${{ secrets.public }}
+          ssh-private-key: ${{ secrets.IMMATHAN_SSH_KEY }}
       - name: Deploy
         run: |
           chmod +x deploy.sh
