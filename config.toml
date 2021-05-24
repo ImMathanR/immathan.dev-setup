@@ -67,8 +67,3 @@ theme = "hyde-hyde"
     weight = 100
     identifier = "posts"
     url = "/posts/"
-[[menu.main]]
-    name = "Portfolio"
-    identifier = "portfolio"
-    weight = 300
-    url = "/portfolio/"
